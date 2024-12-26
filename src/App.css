@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    font-family: Inter;
+  }
+
+  #dashboard {
+    background: linear-gradient(176.81deg, #414593 0%, #00022e 100.23%),
+      url("./assets/images//lumangi-cover.png");
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+  }
+
+  .card-data::-webkit-scrollbar {
+    display: none;
+  }
+  .card-data {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+  }
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    background-color: transparent;
+
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    /* transform: rotateY(180deg); */
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background: linear-gradient(
+      103.31deg,
+      rgba(255, 255, 255, 0) -9.33%,
+      rgba(255, 255, 255, 0.234) 119.91%
+    );
+    backdrop-filter: blur(14.3744px);
+
+    /* background: transparent; */
+    color: black;
+  }
+
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .slider-parent {
+    position: relative;
+  }
+  .buble {
+    position: relative;
+  }
+
+  .custom-reward-win > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: "50%";
+  }
+  .custom-reward-win > div > div > canvas {
+    background-color: aliceblue;
+    border-radius: 50%;
+  }
+
+  .custom-reward-win > div > img {
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .custom-reward-win > div > div > canvas {
+    rotate: -45deg;
+  }
+}
